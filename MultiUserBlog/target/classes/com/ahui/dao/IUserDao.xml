@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ahui.dao.IUserDao">
+    <resultMap id="userMap" type="com.ahui.domain.User">
+        <id column="user_id" property="userID"></id>
+        <result column="user_name" property="userName"></result>
+        <result column="user_phone" property="userPhone"></result>
+        <result column="user_email" property="userEmail"></result>
+        <result column="user_password" property="userPassWord"></result>
+        <result column="user_sex" property="userSex"></result>
+        <result column="user_address" property="userAddress"></result>
+        <result column="user_age" property="userAge"></result>
+        <result column="user_img" property="userImg"></result>
+        <result column="user_status" property="userStatus"></result>
+    </resultMap>
+
+    <select id="findAllUser" resultMap="userMap">
+        select * from user;
+    </select>
+</mapper>
